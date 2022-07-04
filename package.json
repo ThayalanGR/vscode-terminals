@@ -1,6 +1,6 @@
 {
   "name": "vscode-terminals-pro",
-  "displayName": "Terminals Manager",
+  "displayName": "Terminals Manager Pro",
   "description": "An extension for setting-up multiple terminals at once, or just running some commands",
   "icon": "resources/logo-128x128.png",
   "version": "1.13.0",
