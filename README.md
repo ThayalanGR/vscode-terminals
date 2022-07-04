@@ -16,10 +16,10 @@ Check the demo below to learn more.
 
 ## Install
 
-Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=thayalangr.vscode-terminals), or run the following in the command palette:
+Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=thayalangr.vscode-terminals-pro), or run the following in the command palette:
 
 ```shell
-ext install thayalangr.vscode-terminals
+ext install thayalangr.vscode-terminals-pro
 ```
 
 ## Usage
