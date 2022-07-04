@@ -1,5 +1,9 @@
 # Terminals Manager
 
+Forked from https://github.com/fabiospampinato/vscode-terminals
+
+Credits goes to https://github.com/fabiospampinato
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/fabiospampinato/vscode-terminals/master/resources/logo.png" width="128" alt="Logo">
 </p>
@@ -12,10 +16,10 @@ Check the demo below to learn more.
 
 ## Install
 
-Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-terminals), or run the following in the command palette:
+Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=thayalangr.vscode-terminals), or run the following in the command palette:
 
 ```shell
-ext install fabiospampinato.vscode-terminals
+ext install thayalangr.vscode-terminals
 ```
 
 ## Usage
@@ -32,7 +36,7 @@ Terminals: Run Single // Select a single terminal to run
 It adds 1 shortcut:
 
 ```js
-'Cmd/Ctrl+Alt+T' // Triggers `Terminals: Run Single`
+"Cmd/Ctrl+Alt+T"; // Triggers `Terminals: Run Single`
 ```
 
 ## Settings
@@ -106,8 +110,9 @@ Persistent terminals are achieved by saving sessions, and reattaching to them, u
 The currently supported terminal multiplexers are [GNU Screen](https://en.wikipedia.org/wiki/GNU_Screen) and [tmux](https://en.wikipedia.org/wiki/Tmux).
 
 You must have the terminal multiplexer setted in the `terminals.multiplexer` setting installed in your system for this to work:
-  - **Linux/macOS**: your system probably comes with both `screen` and `tmux` installed by default.
-  - **Windows**: you can install them via [cygwin](http://www.cygwin.com) or [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
+
+- **Linux/macOS**: your system probably comes with both `screen` and `tmux` installed by default.
+- **Windows**: you can install them via [cygwin](http://www.cygwin.com) or [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
 
 **Note**: a terminal multiplexer usually modifies the way a terminal work. For instance `ctrl+a` usually means "go to the beginning of the line" inside a terminal, but inside `screen`, `ctrl+a` doesn't work this way. You might want to configure your terminal multiplexer to best suit your needs.
 
@@ -118,7 +123,7 @@ You must have the terminal multiplexer setted in the `terminals.multiplexer` set
 This extension supports some special tokens that you can put in your configuration, they will be substituted with the appropriate value when you execute the terminal. This is especially useful for defining global terminals. Here they are:
 
 | Token                       | Value                                                                                  |
-|-----------------------------|----------------------------------------------------------------------------------------|
+| --------------------------- | -------------------------------------------------------------------------------------- |
 | `[workspaceFolder]`         | The path of the workspace folder that contains the active file                         |
 | `[workspaceFolderBasename]` | The name of the workspace folder that contains the active file without any slashes (/) |
 | `[file]`                    | The current opened file                                                                |
@@ -146,15 +151,15 @@ This extension supports some special tokens that you can put in your configurati
 
 ## Hints
 
-- **[Commands](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-commands)**: Use this other extension, the `terminals.runTerminalByName` command and, optionally, the `onlyAPI` configuration option to create terminals that can be run with a click from the statusbar.
+- **[Commands](https://marketplace.visualstudio.com/items?itemName=thayalangr.vscode-commands)**: Use this other extension, the `terminals.runTerminalByName` command and, optionally, the `onlyAPI` configuration option to create terminals that can be run with a click from the statusbar.
 - **Self-destroying terminals**: it's a common use case to run some commands and then close the terminal, to do this simply put an `exit 0` command at the end of your commands list.
 - **Icons**: [here](https://octicons.github.com/) you can browse a list of supported icons. If for instance you click the first icon, you'll get a page with `.octicon-alert` written in it, to get the string to use simply remove the `.octicon-` part, so in this case the icon name would be `alert`.
 
 ## Contributing
 
-If you found a problem, or have a feature request, please open an [issue](https://github.com/fabiospampinato/vscode-terminals/issues) about it.
+If you found a problem, or have a feature request, please open an [issue](https://github.com/thayalangr/vscode-terminals/issues) about it.
 
-If you want to make a pull request you can debug the extension using [Debug Launcher](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-debug-launcher).
+If you want to make a pull request you can debug the extension using [Debug Launcher](https://marketplace.visualstudio.com/items?itemName=thayalangr.vscode-debug-launcher).
 
 ## License
 

@@ -1,22 +1,28 @@
 {
-  "name": "vscode-terminals",
+  "name": "vscode-terminals-pro",
   "displayName": "Terminals Manager",
   "description": "An extension for setting-up multiple terminals at once, or just running some commands",
   "icon": "resources/logo-128x128.png",
   "version": "1.13.0",
   "license": "MIT",
   "main": "out/extension.js",
-  "publisher": "fabiospampinato",
-  "author": {
-    "name": "Fabio Spampinato",
-    "email": "spampinabio@gmail.com"
-  },
+  "publisher": "thayalangr",
+  "authors": [
+    {
+      "name": "Fabio Spampinato",
+      "email": "spampinabio@gmail.com"
+    },
+    {
+      "name": "Thayalan G R",
+      "email": "grthayalan18@gmail.com"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/fabiospampinato/vscode-terminals/issues"
+    "url": "https://github.com/thayalangr/vscode-terminals/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabiospampinato/vscode-terminals"
+    "url": "https://github.com/thayalangr/vscode-terminals"
   },
   "engines": {
     "vscode": "^1.60.0"
@@ -143,8 +149,7 @@
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "pify": "^3.0.0",
-    "untildify": "^3.0.3",
-    "vscode-beggar": "^1.0.1"
+    "untildify": "^3.0.3"
   },
   "devDependencies": {
     "ts-loader": "^5.2.1",
