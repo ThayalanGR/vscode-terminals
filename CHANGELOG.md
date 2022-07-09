@@ -2,7 +2,7 @@
 
 -   Improved path resolving for the commands, to give precedence to workspace config path over active rootpath
 
-### Version 1.13.0
+### Version 1.13.1
 
 -   Removed unwanted code from main
 
