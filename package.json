@@ -1,161 +1,163 @@
 {
-  "name": "vscode-terminals-pro",
-  "displayName": "Terminals Manager Pro",
-  "description": "An extension for setting-up multiple terminals at once, or just running some commands",
-  "icon": "resources/logo-128x128.png",
-  "version": "1.14.0",
-  "license": "MIT",
-  "main": "out/extension.js",
-  "publisher": "thayalangr",
-  "authors": [
-    {
-      "name": "Fabio Spampinato",
-      "email": "spampinabio@gmail.com"
-    },
-    {
-      "name": "Thayalan G R",
-      "email": "grthayalan18@gmail.com"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/thayalangr/vscode-terminals/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thayalangr/vscode-terminals"
-  },
-  "engines": {
-    "vscode": "^1.60.0"
-  },
-  "keywords": [
-    "terminals",
-    "manager",
-    "startup",
-    "setup",
-    "restore",
-    "command"
-  ],
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "Terminals - Configuration",
-      "properties": {
-        "terminals.configPath": {
-          "type": "string",
-          "description": "The location of the configuration file"
+    "name": "vscode-terminals-pro",
+    "displayName": "Terminals Manager Pro",
+    "description": "An extension for setting-up multiple terminals at once, or just running some commands",
+    "icon": "resources/logo-128x128.png",
+    "version": "1.14.0",
+    "license": "MIT",
+    "main": "out/extension.js",
+    "publisher": "thayalangr",
+    "authors": [
+        {
+            "name": "Fabio Spampinato",
+            "email": "spampinabio@gmail.com"
         },
-        "terminals.autorun": {
-          "type": "boolean",
-          "description": "Execute `Terminals: Run` automatically at startup or when the project is added to the workspace",
-          "default": false
-        },
-        "terminals.autokill": {
-          "type": "boolean",
-          "description": "Kill all the terminals created from this configuration when the project is removed from the workspace",
-          "default": false
-        },
-        "terminals.env": {
-          "type": "object",
-          "additionalProperties": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "description": " Global environment variables that will be applied to all terminals",
-          "default": {}
-        },
-        "terminals.invertCommandsAndDescription": {
-          "type": "boolean",
-          "description": "Invert a terminal commands and description in the quickpick",
-          "default": false
-        },
-        "terminals.showCommands": {
-          "type": "boolean",
-          "description": "Show terminals' commands in the quickpick",
-          "default": false
-        },
-        "terminals.showDescriptions": {
-          "type": "boolean",
-          "description": "Show terminals' descriptions in the quickpick",
-          "default": true
-        },
-        "terminals.sortTerminals": {
-          "type": "boolean",
-          "description": "Sort terminals alphabetically",
-          "default": false
-        },
-        "terminals.multiplexer": {
-          "type": "string",
-          "enum": [
-            "screen",
-            "tmux"
-          ],
-          "description": "The terminal multiplexer to use for persistent terminals",
-          "default": "screen"
-        },
-        "terminals.terminals": {
-          "type": "array",
-          "description": "Array of terminals to open",
-          "default": []
+        {
+            "name": "Thayalan G R",
+            "email": "grthayalan18@gmail.com"
         }
-      }
-    },
-    "commands": [
-      {
-        "command": "terminals.editConfig",
-        "title": "Terminals: Edit Configuration"
-      },
-      {
-        "command": "terminals.kill",
-        "title": "Terminals: Kill"
-      },
-      {
-        "command": "terminals.runTerminals",
-        "title": "Terminals: Run"
-      },
-      {
-        "command": "terminals.runTerminal",
-        "title": "Terminals: Run Single"
-      }
     ],
-    "keybindings": [
-      {
-        "command": "terminals.runTerminal",
-        "key": "ctrl+alt+t",
-        "mac": "cmd+alt+t"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "rm -rf out && webpack --mode production",
-    "compile": "webpack --mode development",
-    "compile:watch": "webpack --mode development --watch",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
-  },
-  "dependencies": {
-    "@types/lodash": "^4.14.118",
-    "@types/node": "^10.12.8",
-    "absolute": "0.0.1",
-    "conf-merge": "^1.0.0",
-    "json5": "^0.5.1",
-    "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
-    "pify": "^3.0.0",
-    "untildify": "^3.0.3"
-  },
-  "devDependencies": {
-    "ts-loader": "^5.2.1",
-    "typescript": "^4.5.5",
-    "vscode": "^1.1.37",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
-  }
+    "bugs": {
+        "url": "https://github.com/thayalangr/vscode-terminals/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thayalangr/vscode-terminals"
+    },
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "keywords": [
+        "terminals",
+        "manager",
+        "startup",
+        "setup",
+        "restore",
+        "command"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Terminals - Configuration",
+            "properties": {
+                "terminals.configPath": {
+                    "type": "string",
+                    "description": "The location of the configuration file"
+                },
+                "terminals.autorun": {
+                    "type": "boolean",
+                    "description": "Execute `Terminals: Run` automatically at startup or when the project is added to the workspace",
+                    "default": false
+                },
+                "terminals.autokill": {
+                    "type": "boolean",
+                    "description": "Kill all the terminals created from this configuration when the project is removed from the workspace",
+                    "default": false
+                },
+                "terminals.env": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "description": " Global environment variables that will be applied to all terminals",
+                    "default": {}
+                },
+                "terminals.invertCommandsAndDescription": {
+                    "type": "boolean",
+                    "description": "Invert a terminal commands and description in the quickpick",
+                    "default": false
+                },
+                "terminals.showCommands": {
+                    "type": "boolean",
+                    "description": "Show terminals' commands in the quickpick",
+                    "default": false
+                },
+                "terminals.showDescriptions": {
+                    "type": "boolean",
+                    "description": "Show terminals' descriptions in the quickpick",
+                    "default": true
+                },
+                "terminals.sortTerminals": {
+                    "type": "boolean",
+                    "description": "Sort terminals alphabetically",
+                    "default": false
+                },
+                "terminals.multiplexer": {
+                    "type": "string",
+                    "enum": [
+                        "screen",
+                        "tmux"
+                    ],
+                    "description": "The terminal multiplexer to use for persistent terminals",
+                    "default": "screen"
+                },
+                "terminals.terminals": {
+                    "type": "array",
+                    "description": "Array of terminals to open",
+                    "default": []
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "terminals.editConfig",
+                "title": "Terminals: Edit Configuration"
+            },
+            {
+                "command": "terminals.kill",
+                "title": "Terminals: Kill"
+            },
+            {
+                "command": "terminals.runTerminals",
+                "title": "Terminals: Run"
+            },
+            {
+                "command": "terminals.runTerminal",
+                "title": "Terminals: Run Single"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "terminals.runTerminal",
+                "key": "ctrl+alt+t",
+                "mac": "cmd+alt+t"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "rm -rf out && webpack --mode production",
+        "compile": "webpack --mode development",
+        "compile:watch": "webpack --mode development --watch",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test",
+        "prettier": "prettier --write src/**/*.ts"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.14.118",
+        "@types/node": "^10.12.8",
+        "absolute": "0.0.1",
+        "conf-merge": "^1.0.0",
+        "json5": "^0.5.1",
+        "lodash": "^4.17.4",
+        "mkdirp": "^0.5.1",
+        "pify": "^3.0.0",
+        "untildify": "^3.0.3"
+    },
+    "devDependencies": {
+        "prettier": "^2.7.1",
+        "ts-loader": "^5.2.1",
+        "typescript": "^4.5.5",
+        "vscode": "^1.1.37",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.2"
+    }
 }
