@@ -50,7 +50,7 @@ onRootRemove();
 /* RUN */
 
 async function run(terminal, config, rootPath?, substitutions?) {
-  rootPath = rootPath || Utils.folder.getActiveRootPath();
+  rootPath = rootPath || config?.configPath || Utils.folder.getActiveRootPath();
 
   const {
       name,
